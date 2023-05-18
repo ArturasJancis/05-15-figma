@@ -1,0 +1,220 @@
+@use 'variables';
+@use 'responsive';
+
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @include responsive.screen-lg {
+    padding: 80px 0;
+    overflow: hidden;
+  }
+
+  @include responsive.screen-lg-sm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include responsive.screen-md {
+    display: block;
+  }
+
+  @include responsive.screen-sm {
+    display: flex;
+  }
+
+  .section-info {
+
+    @include responsive.screen-md {
+      padding: 0 125px 0 32px;
+    }
+
+    @include responsive.screen-sm {
+      padding: 10px;
+    }
+
+    .feature {
+      font-weight: variables.$font-weight-1;
+      color: variables.$color-pink;
+      line-height: 19px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: variables.$font-size-2;
+      font-weight: variables.$font-weight-2;
+      margin: 0;
+      line-height: 116.18px;
+      padding-top: 20px;
+
+      @include responsive.screen-xl {
+        font-size: 58px;
+        line-height: 58.09px;
+        padding: 24px 0;
+      }
+
+      @include responsive.screen-lg {
+        font-size: 48px;
+      }
+    }
+
+    button {
+      background-color: variables.$color-light-1;
+      font-weight: variables.$font-weight-3;
+      font-size: variables.$font-size-1;
+      line-height: 150%;
+      padding: 15px 40px;
+      border: 4px solid #ff4300;
+      border-radius: 30px;
+    }
+  }
+  
+  .section-img {
+
+    @include responsive.screen-md {
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @include responsive.screen-md {
+        position: absolute;
+        width: auto;
+        height: 420px;
+        top: -500px;
+        left: 200px;
+      }
+
+      @include responsive.screen-sm {
+        width: 100%;
+        height: auto;
+        position: inherit;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.section-wrapper-2 {
+
+  position: relative;
+  padding-top: 207px;
+  padding-bottom: 120px;
+
+  @include responsive.screen-lg-sm {
+    justify-content: center;
+  }
+
+  @include responsive.screen-md {
+    padding: 0 0 64px 0;
+    overflow: hidden;
+    display: block;
+  }
+
+  @include responsive.screen-sm {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: inherit;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: variables.$color-light-2;
+  }
+
+  &:before {
+    top: 120px;
+
+    @include responsive.screen-md {
+      top: 0;
+    }
+  }
+
+  &:after {
+    bottom: 123px;
+
+    @include responsive.screen-md {
+      bottom: 62px;
+    }
+  }
+
+
+  .section-info {
+
+    @include responsive.screen-md {
+      padding: 0 132px 0 32px;
+    }
+
+    @include responsive.screen-sm {
+      padding: 0 10px 0 10px;
+    }
+
+    .h1 {
+      font-size: 56px;
+      line-height: 67.77px;
+      padding: 24px 0 24px 0;
+
+      @include responsive.screen-lg {
+        font-size: 46px;
+      }
+    }
+
+    .p-padding {
+      padding: 0 75px 40px 0;
+
+      @include responsive.screen-lg {
+        padding: 0 0 40px 0;
+      }
+
+      .logo-none {
+
+        @include responsive.screen-md {
+          display: none;
+        }
+      }
+
+      @include responsive.screen-md {
+        padding: 0 60px 32px 0;
+      }
+    }
+
+  }
+
+  .section-img-2 {
+    text-align: center;
+
+    @include responsive.screen-md {
+      position: relative;
+      height: auto;
+    }
+
+    img {
+
+      @include responsive.screen-md {
+        position: absolute;
+        width: auto;
+        height: 500px;
+        top: -500px;
+        left: 250px;
+      }
+
+      @include responsive.screen-sm {
+        position: initial;
+        width: auto;
+      }
+    }
+  }
+
+}

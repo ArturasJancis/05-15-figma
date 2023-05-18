@@ -1,0 +1,21 @@
+@use 'variables';
+@use 'responsive';
+
+.h2 {
+  margin: 0;
+  font-weight: variables.$font-weight-4;
+  font-size: variables.$font-size-3;
+  line-height: 48px;
+}
+
+.p {
+  font-size: variables.$font-size-1;
+  line-height: 150%;
+  margin: 0;
+  padding: 40px 12px 40px 0;
+  color: variables.$color-dark-2;
+
+  @include responsive.screen-xl {
+    padding: 0 0 32px 0;
+  }
+}

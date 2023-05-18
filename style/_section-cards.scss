@@ -1,0 +1,134 @@
+@use 'variables';
+@use 'shared-styles';
+@use 'responsive';
+
+.cards-top-section {
+
+  @include responsive.screen-md {
+   padding: 0 32px 0 32px;
+  }
+
+  p {
+    padding: 24px 0 56px 0;
+
+    @include responsive.screen-md {
+      padding: 16px 0 40px 0;
+     }
+
+    .underline {
+      text-decoration: underline;
+      font-weight: variables.$font-weight-4;
+    }
+  }
+
+}
+
+.cards-list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+  
+
+  @include responsive.screen-lg {
+    padding: 0;
+  }
+
+  @include responsive.screen-md {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 0 0 158px 32px;
+    justify-content: flex-start;
+  }
+
+  @include responsive.screen-sm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 10px 153px 10px;
+  }
+
+  .card {
+    background-color: variables.$color-light-2;
+    width: 290px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 20px;
+
+    .card-info-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 24px 0 24px 24px;
+      gap: 12px;
+
+      .feature-2 {
+        font-size: variables.$font-size-4;
+        line-height: 12px;
+        color: variables.$color-orange;
+        text-transform: uppercase;
+        font-weight: variables.$font-weight-4;
+      }
+
+      h3 {
+        font-size: variables.$font-size-1;
+        font-weight: variables.$font-weight-4;
+        line-height: 20px;
+        margin: 0;
+      }
+
+      p {
+        font-size: variables.$font-size-5;
+        line-height: 18px;
+        color: variables.$color-dark-3;
+        margin: 0;
+      }
+    }
+
+    .card-info-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: end;
+      padding: 24px 24px 24px 0;
+      gap: 12px;
+
+      .feature-3 {
+        font-size: variables.$font-size-4;
+        color: variables.$color-dark-3;
+        font-weight: variables.$font-weight-4;
+        text-transform: uppercase;
+        line-height: 12px;
+      }
+
+      h3 {
+        font-size: variables.$font-size-1;
+        font-weight: variables.$font-weight-4;
+        line-height: 20px;
+        margin: 0;
+      }
+
+      p {
+        font-size: variables.$font-size-5;
+        line-height: 18px;
+        color: variables.$color-dark-3;
+        margin: 0;
+      }
+
+      .feature-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .feature-img { 
+          object-fit: cover;
+          width: 13px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}
