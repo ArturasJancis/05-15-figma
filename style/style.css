@@ -302,7 +302,7 @@ header nav ul a {
 .bg-section-wrapper {
   width: 100%;
   height: 320px;
-  background-image: url("./img/background.svg");
+  background-image: url("../img/background.svg");
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
